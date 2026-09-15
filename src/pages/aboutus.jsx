@@ -3,9 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 // Using placeholder paths since we don't know the exact structure
 import animatedImage from '../assets/animated.webp';
 import anshImage from '../assets/ansh.png';
-import krishnaImage from '../assets/krishna.png';
-import dev from '../assets/Dev.png';
-import Darshan from '../assets/Darshan.JPG';
 
 const AboutUsPage = () => {
   const [isInView, setIsInView] = useState(false);
@@ -17,7 +14,7 @@ const AboutUsPage = () => {
   const sections = {
     story: {
       title: "Our Story",
-      content: "Founded in 2023, DesignStudio began as a collaboration between Three passionate individuals with complementary skills in design and development. What started as freelance projects quickly evolved into a dedicated studio focused on delivering exceptional digital experiences."
+      content: "Founded in 2023, DesignStudio began as a passion project with a focus on complementary skills in design and development. What started as freelance projects quickly evolved into a dedicated studio focused on delivering exceptional digital experiences."
     },
     mission: {
       title: "Our Mission",
@@ -36,24 +33,6 @@ const AboutUsPage = () => {
       role: "Lead Developer",
       bio: "Ansh has a passion for clean code and innovative solutions, with expertise inbackend technologies that power modern web applications.",
       image: anshImage
-    },
-    {
-      name: "Krushnaraj Bhosale",
-      role: "FullStack Developer",
-      bio: "Krushnaraj brings a unique perspective to every project and has a Expertise in frontend, focusing on creating intuitive and engaging user experiences.",
-      image: krishnaImage
-    },
-     {
-      name: "Dev Sagani",
-      role: "UI/UX Developer",
-      bio: "UI/UX Designer & Frontend Developer crafting seamless, user-centric digital experiences. Passionate about blending design and code to build intuitive, responsive, and impactful interfaces.",
-      image: dev
-    },
-     {
-      name: "Darshan Dorrik",
-      role: "UI/UX Developer",
-      bio: "Darshan believe every pixel tells a story and every line of code serves a purpose. As a designer-developer hybrid, Drashan create digital narratives that connect brands with their audiences through thoughtful, performance-driven interfaces.",
-      image: Darshan
     },
   ];
   // Detect when section is in view
@@ -267,14 +246,14 @@ const AboutUsPage = () => {
           <div className="text-center mb-12 ">
             <h2 className="text-4xl font-bold text-white mb-4">Meet The Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Small but mighty, our three-person team brings complementary skills and a shared passion for excellence.
+              Small but mighty, our team brings complementary skills and a shared passion for excellence.
             </p>
           </div>
           </div>
         
         {/* Team Members Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 gap-10 max-w-xl mx-auto">
             {teamMembers.map((member, index) => (
               <div 
                 key={index}

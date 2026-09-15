@@ -133,7 +133,7 @@ const HeroSection = () => {
               className={`text-xl text-gray-300 max-w-2xl transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${staggerItems[2].delay}ms` }}
             >
-              A three-person studio delivering bespoke design and development solutions that combine creativity with technical excellence.
+              A dedicated studio delivering bespoke design and development solutions that combine creativity with technical excellence.
             </p>
             
             <div 

@@ -2,9 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import wadhwaevents from '../assets/wadhwaevents.png';
 import spsImage from '../assets/sps.png';
 import jpImage from '../assets/jp.png';
-import mobikooImage from '../assets/mobikoo.png';
 import krishchem from '../assets/krishchem.jpg';
 import kafila from '../assets/kafila.png';
+import meladenperfumes from '../assets/meladenperfumes.png';
+import deepspheretech from '../assets/deepspheretech.png';
+import strydeeva from '../assets/strydeeva.png';
 
 
 const PortfolioPage = () => {
@@ -19,6 +21,57 @@ const PortfolioPage = () => {
   
   // Project data with your actual projects
   const projects = [
+    {
+      id: 9,
+      title: "DeepSphere Tech",
+      description: "A SaaS marketing site for a project management platform, covering products, pricing, and services with a polished enterprise feel.",
+      category: "Web Development",
+      status: "completed",
+      image: deepspheretech,
+      technologies: ["React", "Node.js", "Tailwind CSS"],
+      url: "https://deepspheretech.com/",
+      features: [
+        "Product and services showcase",
+        "Plan comparison and pricing pages",
+        "Lead capture and free trial flow",
+        "Responsive design for all devices"
+      ],
+      color: "#178582"
+    },
+    {
+      id: 3,
+      title: "Meladen Perfumes",
+      description: "A luxury fragrance e-commerce experience with cinematic product presentation and a curated shopping journey.",
+      category: "Web Development",
+      status: "completed",
+      image: meladenperfumes,
+      technologies: ["React", "Next.js", "Tailwind CSS"],
+      url: "https://meladenperfumes.com/",
+      features: [
+        "Cinematic hero and product storytelling",
+        "Curated collection and category browsing",
+        "Customer reviews and testimonials",
+        "Responsive design for all devices"
+      ],
+      color: "#BFA181"
+    },
+    {
+      id: 10,
+      title: "Strydeeva",
+      description: "A fashion e-commerce storefront with an editorial visual style, built to showcase a women's apparel collection.",
+      category: "Web Development",
+      status: "completed",
+      image: strydeeva,
+      technologies: ["React", "Next.js", "MongoDB"],
+      url: "https://strydeeva.com/",
+      features: [
+        "Editorial-style product photography layout",
+        "Collection browsing and filtering",
+        "User accounts and cart",
+        "Responsive design for all devices"
+      ],
+      color: "#E83A3A"
+    },
     {
       id: 1,
       title: "JPEL Extrusion Tech",
@@ -36,41 +89,6 @@ const PortfolioPage = () => {
         "Responsive layout for all screen sizes"
       ],
       color: "#11C5C6"
-    },
-    {
-      id: 2,
-      title: "Wadhwa Events",
-      description: "A comprehensive event management platform featuring seamless booking, interactive galleries, and dedicated service showcases.",
-      category:  "UI/UX Design",
-      status: "completed",
-      image: wadhwaevents,
-      technologies: ["React", "Node.js", "Tailwind CSS"],
-      url: "https://wadhwaevents.com/",
-      features: [
-        "Modern responsive design with elegant UI/UX",
-        "Event booking and management system",
-        "Interactive photo gallery",
-        "Service showcases with detailed information"
-      ],
-      color: "#E83A3A"
-    },
-    {
-      id: 3,
-      title: "Mobikoo",
-      description: "An innovative e-commerce platform for mobile accessories with advanced product filtering and a seamless checkout experience.",
-      category: "Web Development",
-      status: "completed",
-      image: mobikooImage,
-      technologies: ["React", "Next.js", "MongoDB", "Stripe"],
-      url: "https://mobikoo.com/",
-      features: [
-        "Dynamic product catalog with advanced filtering",
-        "Secure payment integration",
-        "User accounts and order tracking",
-        "Responsive design for all devices",
-        "Admin dashboard for inventory management"
-      ],
-      color: "#4D61FC"
     },
     {
       id: 4,
@@ -137,9 +155,26 @@ const PortfolioPage = () => {
       image: "",
       technologies: ["React", "Node.js", "MongoDB",],
       url: "",
-      features: [ 
+      features: [
       ],
       color: "#11C5C6"
+    },
+    {
+      id: 2,
+      title: "Wadhwa Events",
+      description: "A comprehensive event management platform featuring seamless booking, interactive galleries, and dedicated service showcases.",
+      category:  "UI/UX Design",
+      status: "completed",
+      image: wadhwaevents,
+      technologies: ["React", "Node.js", "Tailwind CSS"],
+      url: "https://wadhwaevents.com/",
+      features: [
+        "Modern responsive design with elegant UI/UX",
+        "Event booking and management system",
+        "Interactive photo gallery",
+        "Service showcases with detailed information"
+      ],
+      color: "#E83A3A"
     },
   ];
   
@@ -433,7 +468,7 @@ const PortfolioPage = () => {
               <div className="w-full md:w-2/3 mb-8 md:mb-0 md:pr-10">
                 <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">Ready to bring your vision to life?</h3>
                 <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
-                  Let's collaborate to create something exceptional together. Our three-person team is ready to transform your ideas into reality.
+                  Let's collaborate to create something exceptional together. Our team is ready to transform your ideas into reality.
                 </p>
                 
                  <a href="/contact"

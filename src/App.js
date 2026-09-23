@@ -6,7 +6,6 @@ import PortfolioPage from './pages/portfolio';
 import AnimatedFooter from './Components/Footer';
 import AboutUsPage from './pages/aboutus';
 import ContactPage from './pages/contact';
-import ServicesSection from './Components/Services';
 
 function App() {
   return (

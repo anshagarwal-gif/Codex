@@ -179,34 +179,34 @@ const AnimatedFooter = () => {
             <div className="flex items-center mb-6">
               <img
                 src={`${process.env.PUBLIC_URL}/LOGO.png`}
-                alt="Codex"
+                alt="Ansh Agarwal"
                 className="h-24 w-auto mr-4 object-contain mix-blend-multiply"
               />
               <div>
                 <h3 className="text-white font-bold text-xl tracking-tight">
-                  <span className="text-[#178582]">Codex</span>
+                  <span className="text-[#178582]">Ansh Agarwal</span>
                 </h3>
-                <p className="text-gray-400 text-sm">Web · UI/UX · SEO & Digital Marketing</p>
+                <p className="text-gray-400 text-sm">Java Full Stack Developer</p>
               </div>
             </div>
-            
+
             <p className="text-gray-300 mb-6">
-              We create stunning digital experiences that captivate audiences and drive business growth. 
-              Our team brings a unique blend of creativity and technical expertise.
+              I build production web applications with Java, Spring Boot, ReactJS and MySQL —
+              from multi-tenant SaaS platforms to live business websites.
             </p>
-            
+
             <div className="space-y-3">
               <div className="flex items-center text-gray-300 hover:text-[#178582] transition-colors duration-300">
                 <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>bhosalekrushnaraj@gmail.com</span>
+                <span>ansh.work1610@gmail.com</span>
               </div>
               <div className="flex items-center text-gray-300 hover:text-[#178582] transition-colors duration-300">
                 <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>+91 7385410360</span>
+                <span>+91 8077787578</span>
               </div>
             </div>
           </div>
@@ -243,29 +243,13 @@ const AnimatedFooter = () => {
           <div className="lg:w-1/3">
             <h3 className="text-white font-semibold text-xl mb-6 inline-flex items-center">
               <span className="w-8 h-px bg-[#178582] mr-3"></span>
-              Stay Updated
+              Let's Connect
             </h3>
-            
+
             <p className="text-gray-300 mb-6">
-              Give Star to Our Git-Repository
+              Have a project or opportunity in mind? Reach out — I'd love to talk.
             </p>
-            
-            <form className="relative mb-8">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="w-full bg-[#0F2336] border border-[#178582]/20 text-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-[#178582] transition-colors"
-              />
-              <button 
-                type="submit" 
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#178582] text-white p-2 rounded-md hover:bg-[#178582]/90 transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-            </form>
-            
+
             {/* Social links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -295,7 +279,7 @@ const AnimatedFooter = () => {
         {/* Copyright & back to top */}
         <div className={`flex flex-col md:flex-row justify-between items-center transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '600ms' }}>
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Codex. All rights reserved.
+            © {new Date().getFullYear()} Ansh Agarwal. All rights reserved.
           </div>
           
           <div className="flex items-center">

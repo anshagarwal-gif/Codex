@@ -166,12 +166,12 @@ const ContactPage = () => {
           </div>
           <div className="relative inline-block">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 mt-[60px]">
-              Get in Touch <span className="text-[#BFA181]">with Us</span>
+              Get in Touch <span className="text-[#BFA181]">with Me</span>
             </h2>
             <div className="absolute bottom-2 left-0 w-full h-1 bg-[#178582] animate-expand-underline"></div>
           </div>
           <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            Have a project in mind? We're here to help transform your digital presence.
+            Have a project in mind, or an opportunity to discuss? I'd love to hear from you.
           </p>
         </div>
         
@@ -204,7 +204,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-[#BFA181] text-sm mb-1">Phone</p>
-                    <p className="font-medium text-white">+91 7385410360</p>
+                    <p className="font-medium text-white">+91 8077787578</p>
                   </div>
                 </div>
                 
@@ -216,7 +216,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-[#BFA181] text-sm mb-1">Email</p>
-                    <p className="font-medium text-white">bhosalekrushnaraj@gmail.com <br/> anshagarwal.rishikesh@gmail.com <br />devsagani19@gmail.com</p>
+                    <p className="font-medium text-white">ansh.work1610@gmail.com</p>
                   </div>
                 </div>
                 
@@ -243,7 +243,7 @@ const ContactPage = () => {
             style={{ transitionDelay: '200ms' }}
           >
             <div className="bg-[#0F2336]/70 backdrop-blur-md rounded-2xl p-8 border border-[#178582]/20 shadow-xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
               
               {formSubmitted ? (
                 <div className="rounded-xl bg-[#178582]/20 p-6 text-center animate-fade-in">
@@ -253,7 +253,7 @@ const ContactPage = () => {
                     </svg>
                   </div>
                   <h4 className="text-xl font-bold text-white mb-2">Thank You!</h4>
-                  <p className="text-gray-300">Your message has been sent successfully. We'll get back to you soon!</p>
+                  <p className="text-gray-300">Your message has been sent successfully. I'll get back to you soon!</p>
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
@@ -332,7 +332,7 @@ const ContactPage = () => {
                       name="subject"
                       value={formState.subject}
                       onChange={handleChange}
-                      placeholder="How can we help you?"
+                      placeholder="What's this about?"
                       className="w-full bg-[#0A1828] border border-[#178582]/20 focus:border-[#178582] text-gray-300 px-4 py-3 rounded-lg focus:outline-none transition-colors form-input"
                     />
                     <div className="form-group-focus-line"></div>
@@ -346,7 +346,7 @@ const ContactPage = () => {
                       name="message"
                       value={formState.message}
                       onChange={handleChange}
-                      placeholder="Tell us about your project, requirements, or questions..."
+                      placeholder="Tell me about your project, role, or questions..."
                       rows={6}
                       className="w-full bg-[#0A1828] border border-[#178582]/20 focus:border-[#178582] text-gray-300 px-4 py-3 rounded-lg focus:outline-none transition-colors form-input resize-none"
                       required

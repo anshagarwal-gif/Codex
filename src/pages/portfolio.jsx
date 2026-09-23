@@ -24,66 +24,66 @@ const PortfolioPage = () => {
     {
       id: 9,
       title: "DeepSphere Tech",
-      description: "A SaaS marketing site for a project management platform, covering products, pricing, and services with a polished enterprise feel.",
+      description: "I designed and built a SaaS marketing site for a project management platform, architecting the product, pricing, and services pages to feel enterprise-ready while keeping the funnel simple to convert trials.",
       category: "Web Development",
       status: "completed",
       image: deepspheretech,
-      technologies: ["React", "Node.js", "Tailwind CSS"],
+      technologies: ["React", "Java Spring Boot", "Tailwind CSS"],
       url: "https://deepspheretech.com/",
       features: [
-        "Product and services showcase",
-        "Plan comparison and pricing pages",
-        "Lead capture and free trial flow",
-        "Responsive design for all devices"
+        "Product and services showcase I structured around the buyer journey",
+        "Plan comparison and pricing pages built for quick scanning",
+        "Lead capture and free trial flow wired end-to-end",
+        "Responsive layout across all breakpoints"
       ],
       color: "#178582"
     },
     {
       id: 3,
       title: "Meladen Perfumes",
-      description: "A luxury fragrance e-commerce experience with cinematic product presentation and a curated shopping journey.",
+      description: "I built a luxury fragrance storefront from the ground up, pairing a cinematic hero and product presentation with a Spring Boot backend to handle catalog and orders.",
       category: "Web Development",
       status: "completed",
       image: meladenperfumes,
-      technologies: ["React", "Next.js", "Tailwind CSS"],
+      technologies: ["React", "Java Spring Boot", "Tailwind CSS"],
       url: "https://meladenperfumes.com/",
       features: [
-        "Cinematic hero and product storytelling",
-        "Curated collection and category browsing",
-        "Customer reviews and testimonials",
-        "Responsive design for all devices"
+        "Cinematic hero and product storytelling I designed and animated",
+        "Collection and category browsing I built for discoverability",
+        "Customer reviews and testimonials module",
+        "Responsive design across all devices"
       ],
       color: "#BFA181"
     },
     {
       id: 10,
       title: "Strydeeva",
-      description: "A fashion e-commerce storefront with an editorial visual style, built to showcase a women's apparel collection.",
+      description: "I developed a fashion e-commerce storefront with an editorial visual style, focusing on a layout that lets the product photography carry the design.",
       category: "Web Development",
       status: "completed",
       image: strydeeva,
-      technologies: ["React", "Next.js", "MongoDB"],
+      technologies: ["React", "Java Spring Boot", "MySQL"],
       url: "https://strydeeva.com/",
       features: [
-        "Editorial-style product photography layout",
-        "Collection browsing and filtering",
-        "User accounts and cart",
-        "Responsive design for all devices"
+        "Editorial-style product photography layout I built",
+        "Collection browsing and filtering I implemented",
+        "User accounts and cart flow",
+        "Responsive design across all devices"
       ],
       color: "#E83A3A"
     },
     {
       id: 1,
       title: "JPEL Extrusion Tech",
-      description: "A sophisticated web application with advanced features for data visualization and interactive user dashboards.",
+      description: "I built a sophisticated web application with advanced data visualization and interactive dashboards for an industrial client, focusing on making dense operational data easy to read at a glance.",
       category: "Web Development",
       status: "completed",
       image: jpImage,
-      technologies: ["React", "D3.js", "Firebase", "Material UI"],
+      technologies: ["React", "D3.js", "Java Spring Boot", "MySQL", "Material UI"],
       url: "https://jpel.in/",
       features: [
-        "Complex data visualization components",
-        "Real-time data updates",
+        "Complex data visualization components I built with D3.js",
+        "Live data updates pulled from the backend",
         "User authentication and profiles",
         "Advanced filtering and search capabilities",
         "Responsive layout for all screen sizes"
@@ -93,14 +93,14 @@ const PortfolioPage = () => {
     {
       id: 4,
       title: "SPS Portfolio",
-      description: "A sleek, modern portfolio website showcasing professional services and projects with elegant animations and interactive elements.",
+      description: "I designed and built a sleek, modern portfolio website to showcase professional services and projects, with elegant animations and interactive elements throughout.",
       category: "UI/UX Design",
       status: "completed",
       image: spsImage,
       technologies: ["React", "Framer Motion", "Tailwind CSS"],
       url: "https://sps-self.vercel.app/",
       features: [
-        "Smooth scroll animations and transitions",
+        "Smooth scroll animations and transitions I built with Framer Motion",
         "Interactive project showcases",
         "Optimized performance metrics",
         "Contact form integration"
@@ -110,11 +110,11 @@ const PortfolioPage = () => {
     {
       id: 5,
       title: "Krish Chemicals",
-      description: "We developing a professional, responsive website for Krish Chemical, a company specializing in high-quality chemical solutions. The goal is to create a clean, modern digital presence that reflects the company’s industrial reliability and product excellence.",
+      description: "I designed and developed a professional, responsive website for a chemical solutions company, aiming for a clean, modern digital presence that reflects industrial reliability and product excellence.",
       category: "Web Development",
       status: "completed",
       image: krishchem,
-      technologies: ["React", "Node.js", "MongoDB",],
+      technologies: ["React", "Java Spring Boot", "MySQL",],
       url: "https://krishchemusa.com/",
       features: [
       ],
@@ -127,22 +127,22 @@ const PortfolioPage = () => {
       category: "Web Development",
       status: "completed",
       image: kafila,
-      technologies: ["React", "Node.js", "MySQL",],
+      technologies: ["React", "Java Spring Boot", "MySQL",],
       url: "https://kafiladventures.com/",
-      features: [ 
+      features: [
       ],
       color: "#11C5C6"
     },
     {
       id: 7,
       title: "Prernadip Plastics",
-      description: "We are currently designing and developing a modern, responsive website for Prernadip Plastics Private Limited, a trusted name in plastic manufacturing and solutions. The website is being crafted to reflect the company’s industrial strength, product range, and commitment to quality.",
+      description: "I'm currently designing and developing a modern, responsive website for a plastic manufacturing company, crafted to reflect their industrial strength, product range, and commitment to quality.",
       category: "Web Development",
       status: "in-progress",
       image: "",
-      technologies: ["React", "Node.js", "MySQL",],
+      technologies: ["React", "Java Spring Boot", "MySQL",],
       url: "",
-      features: [ 
+      features: [
       ],
       color: "#11C5C6"
     },
@@ -153,7 +153,7 @@ const PortfolioPage = () => {
       category: "Web Development",
       status: "in-progress",
       image: "",
-      technologies: ["React", "Node.js", "MongoDB",],
+      technologies: ["React", "Java Spring Boot", "MySQL",],
       url: "",
       features: [
       ],
@@ -162,11 +162,11 @@ const PortfolioPage = () => {
     {
       id: 2,
       title: "Wadhwa Events",
-      description: "A comprehensive event management platform featuring seamless booking, interactive galleries, and dedicated service showcases.",
+      description: "I built a comprehensive event management platform featuring seamless booking, interactive galleries, and dedicated service showcases.",
       category:  "UI/UX Design",
       status: "completed",
       image: wadhwaevents,
-      technologies: ["React", "Node.js", "Tailwind CSS"],
+      technologies: ["React", "Java Spring Boot", "Tailwind CSS"],
       url: "https://wadhwaevents.com/",
       features: [
         "Modern responsive design with elegant UI/UX",
@@ -311,15 +311,15 @@ const PortfolioPage = () => {
             <div>
               <div className="inline-block mb-3">
                 <span className="inline-block py-1 px-3 bg-[#178582]/10 rounded-full text-[#178582] text-sm font-medium mt-[55px]">
-                  Our Work
+                  My Work
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 md:mb-6 tracking-tight">
                 Featured <span className="text-[#BFA181]">Projects</span>
               </h2>
               <p className="max-w-2xl text-gray-300 text-base md:text-lg">
-                Explore our portfolio of successful projects, 
-                each reflecting our commitment to quality, innovation, and attention to detail.
+                A selection of projects I've built and shipped,
+                each reflecting my commitment to quality, reliability, and attention to detail.
               </p>
             </div>
             
@@ -468,7 +468,7 @@ const PortfolioPage = () => {
               <div className="w-full md:w-2/3 mb-8 md:mb-0 md:pr-10">
                 <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">Ready to bring your vision to life?</h3>
                 <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
-                  Let's collaborate to create something exceptional together. Our team is ready to transform your ideas into reality.
+                  I'd love to hear about it and help build it — from architecture to deployment.
                 </p>
                 
                  <a href="/contact"

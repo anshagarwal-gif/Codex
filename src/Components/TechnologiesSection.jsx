@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 // Import all the technology logos
 import css3Logo from '../Components/Technologylogo/css3.webp';
-import firebaseLogo from '../Components/Technologylogo/firebase.webp';
+import dockerLogo from '../Components/Technologylogo/docker.svg';
 import githubLogo from '../Components/Technologylogo/github.webp';
 import hostingerLogo from '../Components/Technologylogo/hostinger.png';
 import html5Logo from '../Components/Technologylogo/html5.jpg';
 import javaLogo from '../Components/Technologylogo/java.png';
 import javascriptLogo from '../Components/Technologylogo/javascript.webp';
-import mongodbLogo from '../Components/Technologylogo/mongodb.png';
 import mysqlLogo from '../Components/Technologylogo/mysql.png';
-import nodejsLogo from '../Components/Technologylogo/nodejs.jpg';
+import springbootLogo from '../Components/Technologylogo/springboot.svg';
 import reactLogo from '../Components/Technologylogo/react.jpg';
 import tailwindLogo from '../Components/Technologylogo/tailwind.png';
 import vscodeLogo from '../Components/Technologylogo/vscode.png';
@@ -21,15 +20,14 @@ import railwayslogo from '../Components/Technologylogo/railways.png';
 // Map for logo imports - makes it easier to reference them by name
 const logoMap = {
   css3: css3Logo,
-  firebase: firebaseLogo,
+  docker: dockerLogo,
   github: githubLogo,
   hostinger: hostingerLogo,
   html5: html5Logo,
   java: javaLogo,
   javascript: javascriptLogo,
-  mongodb: mongodbLogo,
   mysql: mysqlLogo,
-  nodejs: nodejsLogo,
+  springboot: springbootLogo,
   react: reactLogo,
   tailwind: tailwindLogo,
   vscode: vscodeLogo,
@@ -72,9 +70,8 @@ const TechnologiesSection = () => {
     {
       category: "Backend",
       techs: [
-        { name: "Node.js", logo:"nodejs" },
         { name: "Java", logo: "java" },
-        { name: "MongoDB", logo: "mongodb" },
+        { name: "Spring Boot", logo: "springboot" },
         { name: "MySQL", logo: "mysql" }
       ]
     },
@@ -82,7 +79,7 @@ const TechnologiesSection = () => {
       category: "Tools & Platforms",
       techs: [
         { name: "Git", logo: "github" },
-        { name: "Firebase", logo: "firebase" },
+        { name: "Docker", logo: "docker" },
         { name: "VS Code", logo: "vscode" },
         { name: "Hostinger", logo: "hostinger"},
         { name: "Railways", logo: "railways"}
@@ -134,11 +131,11 @@ const TechnologiesSection = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block mb-3">
             <span className="inline-block py-1 px-3 bg-[#178582]/10 rounded-full text-[#178582] text-sm font-medium">
-              Our Stack
+              My Stack
             </span>
           </div>
           <h2 className="text-5xl font-bold text-white mb-6">
-            Technologies We <span className="text-[#BFA181] relative">
+            Technologies I <span className="text-[#BFA181] relative">
               Work With
               <svg className="absolute -bottom-3 left-0 w-full" viewBox="0 0 168 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 5.5C68.5 2 114.5 2.5 166 5.5" stroke="#178582" strokeWidth="3" strokeLinecap="round"/>
@@ -146,7 +143,7 @@ const TechnologiesSection = () => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            We leverage modern technologies to build robust, scalable, and high-performance digital solutions.
+            I use these technologies to build robust, scalable, and production-ready web applications.
           </p>
         </div>
         

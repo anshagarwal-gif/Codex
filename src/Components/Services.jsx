@@ -28,20 +28,20 @@ const ServicesSection = () => {
   // Services data
   const services = [
     {
-      title: "UI/UX Design",
+      title: "Backend Development",
       icon: (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#BFA181" strokeWidth="2" strokeLinecap="round"/>
           <path d="M8 12L11 15L16 9" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      description: "We create intuitive, engaging user experiences that delight your audience and achieve your business goals.",
-      features: ["User Research", "Wireframing", "Prototyping", "Usability Testing", "Responsive Design"],
+      description: "I build secure, scalable backend systems with Java and Spring Boot — clean REST APIs, authentication, and well-designed data models.",
+      features: ["Spring Boot & Spring Security", "REST API Design", "OAuth 2.0 & JWT Auth", "MySQL Schema Design", "Query Optimization"],
       color: "#178582",
       image: webd
     },
     {
-      title: "Web Development",
+      title: "Frontend Development",
       icon: (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke='#BFA181'>
           <path d="M16 18L22 12L16 6" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -49,13 +49,13 @@ const ServicesSection = () => {
           <path d="M10 4L14 20" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      description: "We build fast, scalable, and reliable websites and web applications using modern technologies and best practices.",
-      features: ["Frontend Development", "Backend Systems", "E-commerce Solutions", "CMS Integration", "Performance Optimization"],
+      description: "I build fast, responsive user interfaces with ReactJS that stay clean and usable across every screen size.",
+      features: ["ReactJS", "Responsive Web Development", "Component Architecture", "State Management", "API Integration"],
       color: "#BFA181",
       image: uiux
     },
     {
-      title: "SEO & Digital Marketing",
+      title: "Deployment & DevOps",
       icon: (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#178582">
           <path d="M3 3v18h18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -64,8 +64,8 @@ const ServicesSection = () => {
           <path d="M8 17v-3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      description: "We boost your online visibility and grow your brand with data-driven SEO strategies and targeted digital marketing campaigns.",
-      features: ["Search Engine Optimization", "Content Strategy", "Social Media Marketing", "Analytics & Reporting", "Conversion Optimization"],
+      description: "I take applications from code to production — deploying and maintaining them on Linux servers so they stay live and reliable.",
+      features: ["Linux Administration", "VPS Deployment", "Nginx Configuration", "SSL Certificate Management", "Git & GitHub"],
       color: "#178582",
       image: webd
     },
@@ -103,19 +103,19 @@ const ServicesSection = () => {
         <div className={`text-center mb-20 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block mb-3">
             <span className="inline-block py-1 px-3 bg-[#178582]/10 rounded-full text-[#178582] text-sm font-medium">
-              Our Expertise
+              My Expertise
             </span>
           </div>
           <h2 className="text-5xl font-bold text-white mb-6">
-            Services We <span className="text-[#BFA181] relative">
-              Deliver
+            What I <span className="text-[#BFA181] relative">
+              Do
               <svg className="absolute -bottom-3 left-0 w-full" viewBox="0 0 168 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 5.5C68.5 2 114.5 2.5 166 5.5" stroke="#178582" strokeWidth="3" strokeLinecap="round"/>
               </svg>
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            We combine technical expertise with creative thinking to deliver exceptional digital solutions that meet your unique needs.
+            I combine backend, frontend, and deployment skills to ship full stack web applications end to end.
           </p>
         </div>
         
@@ -245,7 +245,7 @@ const ServicesSection = () => {
                     href="/contact" 
                     className="inline-flex items-center px-6 py-3 bg-[#178582] hover:bg-[#178582]/90 text-white rounded-lg font-medium transition-all transform hover:scale-105 hover:shadow-lg group"
                   >
-                    Discuss Your Project
+                    Discuss My Work
                     <svg 
                       className="ml-2 w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" 
                       fill="none" 
@@ -264,9 +264,9 @@ const ServicesSection = () => {
         {/* Process section */}
         <div className="mt-28">
           <div className={`text-center mb-12 transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h3 className="text-3xl font-bold text-white mb-4">Our Process</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">How I Work</h3>
             <p className="max-w-2xl mx-auto text-gray-300">
-              A systematic approach that ensures quality, efficiency, and successful outcomes for every project.
+              A systematic approach that keeps every project reliable, from first conversation to production deployment.
             </p>
           </div>
           
@@ -280,22 +280,22 @@ const ServicesSection = () => {
                 {
                   number: "01",
                   title: "Discovery",
-                  description: "We start by understanding your business, goals, and requirements through in-depth consultation."
+                  description: "I start by understanding the business, goals, and requirements through in-depth consultation."
                 },
                 {
                   number: "02",
                   title: "Strategy",
-                  description: "We develop a comprehensive plan tailored to your specific needs and objectives."
+                  description: "I plan out the architecture, schema, and API design tailored to the project's needs."
                 },
                 {
                   number: "03",
-                  title: "Creation",
-                  description: "Our team brings the strategy to life through expert design and development."
+                  title: "Build",
+                  description: "I bring the plan to life with clean, tested backend and frontend code."
                 },
                 {
                   number: "04",
-                  title: "Refinement",
-                  description: "We test, refine, and optimize to ensure the final product exceeds expectations."
+                  title: "Deploy",
+                  description: "I deploy, test, and refine on production infrastructure to make sure it holds up."
                 }
               ].map((step, index) => (
                 <div 
@@ -331,9 +331,9 @@ const ServicesSection = () => {
             
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center text-center">
-              <h3 className="text-3xl font-bold text-white mb-4">Ready to transform your digital presence?</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">Have a project in mind?</h3>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-                Let's collaborate to create something exceptional together. Our personalized approach ensures that your unique needs and goals are always the priority.
+                I'd love to hear about it. Let's talk through what you need and how I can help build it.
               </p>
               
               <div className="flex flex-wrap gap-4 justify-center">
@@ -355,7 +355,7 @@ const ServicesSection = () => {
                   href="/portfolio" 
                   className="px-8 py-4 border border-[#BFA181] text-[#BFA181] font-medium rounded-lg transition-all hover:bg-[#BFA181]/10 transform hover:scale-105"
                 >
-                  View Our Portfolio
+                  View My Portfolio
                 </a>
               </div>
             </div>

@@ -4,7 +4,7 @@ const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [typedText, setTypedText] = useState('');
-  const fullText = "We craft digital experiences that elevate brands";
+  const fullText = "I build full stack web apps that scale";
   const typeSpeed = 50;
   
   useEffect(() => {
@@ -110,7 +110,7 @@ const HeroSection = () => {
             >
               <span className="text-lg font-light text-[#178582] tracking-wide pb-2 relative overflow-hidden inline-block">
                 <span className="relative z-10 animate-shimmer bg-gradient-to-r from-[#178582] via-teal-300 to-[#178582] bg-clip-text text-transparent bg-[length:200%_100%]">
-                 THREE MINDS,UNLIMITED CREATIVITY
+                 JAVA FULL STACK DEVELOPER
                 </span>
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-[#178582] animate-expand"></span>
               </span>
@@ -133,7 +133,7 @@ const HeroSection = () => {
               className={`text-xl text-gray-300 max-w-2xl transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${staggerItems[2].delay}ms` }}
             >
-              A dedicated studio delivering bespoke design and development solutions that combine creativity with technical excellence.
+              I'm Ansh Agarwal, a Java Full Stack Developer building production web apps with Java, Spring Boot, ReactJS and MySQL — from multi-tenant SaaS platforms to live business websites.
             </p>
             
             <div 
@@ -141,11 +141,11 @@ const HeroSection = () => {
               style={{ transitionDelay: `${staggerItems[3].delay}ms` }}
             >
               <a href='/portfolio' className="group px-8 py-4 bg-[#178582] text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden relative">
-                <span className="relative z-10">View Our Work</span>
+                <span className="relative z-10">View My Work</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-[#178582] to-teal-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </a>
               <a href='/contact' className="group px-8 py-4 border border-[#BFA181] text-[#BFA181] font-medium rounded-lg transition-all duration-300 relative overflow-hidden">
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">Contact Us</span>
+                <span className="relative z-10 group-hover:text-white transition-colors duration-300">Contact Me</span>
                 <span className="absolute inset-0 bg-[#BFA181] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
             </div>
@@ -220,7 +220,7 @@ const HeroSection = () => {
               className="absolute -bottom-6 right-6 bg-[#0A1828] text-[#BFA181] px-6 py-3 rounded-lg shadow-lg border border-[#BFA181]/20 transform rotate-3 hover:rotate-0 transition-all hover:scale-110 duration-300 animate-float-slow"
               style={{animationDuration: '6s'}}
             >
-              <span className="font-semibold">Est. 2024</span>
+              <span className="font-semibold">Open to Work</span>
             </div>
           </div>
         </div>

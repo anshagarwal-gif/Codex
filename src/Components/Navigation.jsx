@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
-  
+
   // Handle scroll effect for navigation
   useEffect(() => {
     const handleScroll = () => {
@@ -22,9 +25,9 @@ const Navigation = () => {
   // Navigation links - full list for desktop
   const navLinks = [
     { id: '/', label: 'Home' },
-    { id: '/Home#services', label: 'Services' },
+    { id: '/Home#services', label: 'Skills' },
     { id: '/portfolio', label: 'Portfolio' },
-    { id: '/aboutus', label: 'About Us' },
+    { id: '/aboutus', label: 'About' },
   ];
   
   // Mobile navigation links - including services now
@@ -59,26 +62,38 @@ const Navigation = () => {
       return true;
     }
     
-    // If section not found, try setting window.location.hash as fallback
-    window.location.hash = id;
     setIsMobileMenuOpen(false);
     return false;
   }, []);
-  
+
+  // After navigating to a route that carries a #hash, scroll to that section
+  // once the target page has actually mounted.
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const timer = setTimeout(() => scrollToSection(id), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname, location.hash, scrollToSection]);
+
   // Handle link click with proper navigation logic
   const handleLinkClick = useCallback((e, link) => {
-    // Update active state
+    e.preventDefault();
     setActiveLink(link.id);
-    
-    // If it's a hash link, prevent default and handle custom scrolling
-    if (link.id.startsWith('#')) {
-      e.preventDefault();
-      scrollToSection(link.id);
+    setIsMobileMenuOpen(false);
+
+    const [path, hash] = link.id.split('#');
+    const targetPath = path || '/';
+    const isHomeTarget = targetPath === '/' || targetPath === '/Home';
+    const onHomeRoute = location.pathname === '/' || location.pathname === '/Home';
+
+    if (hash && isHomeTarget && onHomeRoute) {
+      // Already on the home page - just scroll, no navigation needed
+      scrollToSection(hash);
     } else {
-      // For regular links, close mobile menu but allow default navigation
-      setIsMobileMenuOpen(false);
+      navigate(hash ? `${targetPath}#${hash}` : targetPath);
     }
-  }, [scrollToSection]);
+  }, [navigate, location.pathname, scrollToSection]);
   
   return (
     <nav 
@@ -95,15 +110,15 @@ const Navigation = () => {
             <a href="/" className="flex items-center">
               <img
                 src={`${process.env.PUBLIC_URL}/LOGO.png`}
-                alt="Codex"
+                alt="Ansh Agarwal"
                 className="h-24 w-auto mr-3 object-contain mix-blend-multiply"
               />
               <div className="flex flex-col">
                 <span className="text-[#178582] font-bold text-xl tracking-tight leading-tight">
-                  Codex
+                  Ansh Agarwal
                 </span>
                 <span className="text-gray-400 text-sm font-normal mt-0.5">
-                  Web · UI/UX · SEO & Digital Marketing
+                  Java Full Stack Developer
                 </span>
               </div>
             </a>

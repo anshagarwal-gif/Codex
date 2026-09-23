@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const AnimatedFooter = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isInView, setIsInView] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [hoveredLink, setHoveredLink] = useState(null);
@@ -61,10 +64,31 @@ const AnimatedFooter = () => {
   const navLinks = [
     { name: 'Home', url: '/' },
     { name: 'About', url: '/aboutus' },
-    { name: 'Services', url: '/Home#services' },
+    { name: 'Skills', url: '/Home#services' },
     { name: 'Portfolio', url: '/portfolio' },
     { name: 'Contact', url: '/contact' }
   ];
+
+  // Client-side navigation that scrolls to a #hash section once the target page mounts
+  const handleNavLinkClick = (e, url) => {
+    e.preventDefault();
+    const [path, hash] = url.split('#');
+    const targetPath = path || '/';
+
+    if (hash) {
+      const isHomeTarget = targetPath === '/' || targetPath === '/Home';
+      const onHomeRoute = location.pathname === '/' || location.pathname === '/Home';
+      if (isHomeTarget && onHomeRoute) {
+        const section = document.getElementById(hash);
+        if (section) {
+          const offsetPosition = section.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }
+        return;
+      }
+    }
+    navigate(hash ? `${targetPath}#${hash}` : targetPath);
+  };
 
   // Function to render social icons
   const renderSocialIcon = (icon) => {
@@ -177,11 +201,9 @@ const AnimatedFooter = () => {
         <div className={`flex flex-col lg:flex-row gap-10 lg:gap-20 mb-16 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="lg:w-1/3">
             <div className="flex items-center mb-6">
-              <img
-                src={`${process.env.PUBLIC_URL}/LOGO.png`}
-                alt="Ansh Agarwal"
-                className="h-24 w-auto mr-4 object-contain mix-blend-multiply"
-              />
+              <div className="w-11 h-11 mr-3 rounded-lg bg-gradient-to-br from-[#178582] to-[#0d4f4d] flex items-center justify-center text-white font-bold shrink-0">
+                AA
+              </div>
               <div>
                 <h3 className="text-white font-bold text-xl tracking-tight">
                   <span className="text-[#178582]">Ansh Agarwal</span>
@@ -225,8 +247,9 @@ const AnimatedFooter = () => {
                   className={`transition-all duration-500 transform ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <a 
+                  <a
                     href={link.url}
+                    onClick={(e) => handleNavLinkClick(e, link.url)}
                     className="text-gray-300 hover:text-[#BFA181] transition-colors duration-300 group flex items-center"
                     onMouseEnter={() => setHoveredLink(link.name)}
                     onMouseLeave={() => setHoveredLink(null)}

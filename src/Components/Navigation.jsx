@@ -17,10 +17,18 @@ const Navigation = () => {
         setIsScrolled(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
   
   // Navigation links - full list for desktop
   const navLinks = [
@@ -103,21 +111,19 @@ const Navigation = () => {
           : 'py-6 bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <img
-                src={`${process.env.PUBLIC_URL}/LOGO.png`}
-                alt="Ansh Agarwal"
-                className="h-24 w-auto mr-3 object-contain mix-blend-multiply"
-              />
-              <div className="flex flex-col">
-                <span className="text-[#178582] font-bold text-xl tracking-tight leading-tight">
+          <div className="flex items-center min-w-0">
+            <a href="/" onClick={(e) => handleLinkClick(e, { id: '/' })} className="flex items-center min-w-0">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 mr-2.5 sm:mr-3 rounded-lg bg-gradient-to-br from-[#178582] to-[#0d4f4d] flex items-center justify-center text-white font-bold text-sm sm:text-base shrink-0">
+                AA
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-[#178582] font-bold text-base sm:text-xl tracking-tight leading-tight whitespace-nowrap">
                   Ansh Agarwal
                 </span>
-                <span className="text-gray-400 text-sm font-normal mt-0.5">
+                <span className="hidden sm:block text-gray-400 text-sm font-normal mt-0.5 whitespace-nowrap">
                   Java Full Stack Developer
                 </span>
               </div>
@@ -156,7 +162,7 @@ const Navigation = () => {
           </div>
           
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center shrink-0">
             <button 
               className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -185,12 +191,12 @@ const Navigation = () => {
       </div>
       
       {/* Mobile Menu - now including Services */}
-      <div 
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+      <div
+        className={`md:hidden fixed inset-x-0 top-0 bottom-0 z-40 bg-[#0A1828] overflow-y-auto transition-opacity duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="px-4 pt-2 pb-4 bg-[#0A1828]/95 backdrop-blur-md space-y-1 sm:px-3 border-t border-[#178582]/20">
+        <div className="px-4 pt-24 pb-4 space-y-1 sm:px-3">
           {mobileNavLinks.map(link => (
             <a
               key={link.id}

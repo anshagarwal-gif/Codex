@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './Components/Navigation'; // Import your Navigation component
+import ScrollToTop from './Components/ScrollToTop';
 import Home from './pages/Home';
 import PortfolioPage from './pages/portfolio';
 import AnimatedFooter from './Components/Footer';
@@ -10,6 +11,7 @@ import ContactPage from './pages/contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navigation /> {/* Add Navigation here, outside Routes but inside Router */}
       <Routes>
         <Route path="/" element={<Home />} />

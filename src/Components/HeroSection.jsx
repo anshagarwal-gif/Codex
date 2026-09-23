@@ -151,9 +151,9 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Visual element with advanced animations */}
-          <div 
-            className={`md:w-2/5 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}
+          {/* Visual element with advanced animations - decorative only, hidden on mobile */}
+          <div
+            className={`hidden md:block md:w-2/5 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}
             style={{ transitionDelay: '300ms' }}
           >
             <div 
